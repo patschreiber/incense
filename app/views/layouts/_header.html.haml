@@ -1,20 +1,33 @@
-.row.accent_color
-  .container
-    .navbar{ "role" => "navigation"}
-      .navbar-header
-        %button{ :class => "navbar-toggle btn btn-warning", :data => { :toggle => 'collapse', :target => '#collapsed-header' } }
-          %span{ :class => 'ss-icon header-icons' }
-            &#x2026;
-        = link_to "Incense", "#", :class => "navbar-brand"
+.width-100.accent_color
+  .navigation
+    .container
+      .navbar{ "role" => "navigation"}
+        .navbar-header
+          %button{ :class => "navbar-toggle btn btn-warning", :data => { :toggle => 'collapse', :target => '#collapsed-header' } }
+            %span{ :class => 'ss-icon header-icons' }
+              &#x2026;
 
-      .collapse.navbar-collapse#collapsed-header
-        %ul{ :class => "nav navbar-nav" }
-          %li
-            = link_to "1", "#"
-          %li
-            = link_to "2", "#"
-        %ul{ :class => "nav navbar-nav navbar-right" }
-          %li
-            = link_to "Sign In", "#"
-          %li
-            = link_to "Sign Up", new_user_registration_path, :class => "btn btn-warning"
+          // Possibly move brand link to if signed in, go to account page and if not, go to root path
+          = link_to "Incense", root_path, :class => "navbar-brand"
+        - if user_signed_in?
+          .collapse.navbar-collapse#collapsed-header
+            %ul{ :class => "nav navbar-nav" }
+              %li
+                = link_to "1", "#"
+              %li
+                = link_to "2", "#"
+              %ul{ :class => "nav navbar-nav navbar-right" }
+                %li
+                  = link_to "Logout", logout_path, method: "delete", :class => "btn btn-warning"
+        - else
+          .collapse.navbar-collapse#collapsed-header       
+            %ul{ :class => "nav navbar-nav" }
+              %li
+                = link_to "1", "#"
+              %li
+                = link_to "2", "#"     
+            %ul{ :class => "nav navbar-nav navbar-right" }
+              %li
+                = link_to "Sign In", "#"
+              %li
+                = link_to "Sign Up", signup_path, :class => "btn btn-warning"

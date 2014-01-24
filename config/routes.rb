@@ -1,5 +1,12 @@
 Incense::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
+
+  devise_scope :user do
+    match '/signup' => 'devise/registrations#new', via: 'get', :as => :signup
+    match '/signin' => 'devise/sessions#new', via: 'get'
+    match '/logout' => 'devise/sessions#destroy', via: 'delete'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

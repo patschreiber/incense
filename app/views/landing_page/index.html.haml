@@ -1,18 +1,22 @@
 - provide :title, 'Home'
 - content_for :body_class, "landing_page"
 
-.row.warning
+.row
   .container
-    
-
-//.row.accent_color
-//  .container
-//    Heya
-
-//.row.call_to_action
-//  .container
-//    Heya
-
-//.row.green
-//  .container
-//    = form_for
+    .jumbotron.text-center
+      %h1.text-center
+        What's in the fridge?
+      %h2
+        Incense keeps track of perishable foods in your fridge (or cabinet, or kitchen) and alerts you when something is about to spoil. 
+        %br
+        %br
+        Never waste money or food again. 
+      = link_to "Sign up for free", signup_path, :class => "btn btn-warning signup-landing-page"
+.row.gray_lightest
+  .container
+    .col-sm-4.col-md-4.col-lg-4
+      %a{ :href => "#", :class => "thumbnail" }
+    .col-sm-4.col-md-4.col-lg-4
+      %a{ :href => "#", :class => "thumbnail" }
+    .col-sm-4.col-md-4.col-lg-4
+      %a{ :href => "#", :class => "thumbnail" }

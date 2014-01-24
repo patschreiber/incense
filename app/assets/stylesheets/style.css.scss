@@ -34,26 +34,73 @@ body {
   background-color: darken($warning, 5%);
 }
 
+.nav > li > a:hover {
+  background-color: darken($accent_color, 5%)
+}
 
 
-  /* Remove these test classes */
-  .black {
-    background-color: #000;
+/*
+##################################################################
+#                     Utility Classes                            #
+##################################################################
+*/
+
+
+.width-100 {
+  width: 100%;
+}
+
+
+/*
+##################################################################
+#                     Color Classes                              #
+##################################################################
+*/
+
+
+.call_to_action {
+  background-color: $call_to_action;
+}
+
+.accent_color {
+  background-color: $accent_color;
+}
+
+.success {
+  background-color: $success;
+}
+
+.warning {
+  background-color: $warning;
+}
+
+.gray_lightest {
+  background-color: $gray_lightest;
+}
+
+
+.navigation {
+  .container {
+    padding: 0 0 0 0;
   }
 
-  .call_to_action {
-    background-color: $call_to_action;
+  a {
+    color: #FFF;
   }
 
-  .accent_color {
-    background-color: $accent_color;
+  .navbar-brand {
+    font-size: 2.5em;
+  }
+}
+
+
+body.landing_page {
+  h1 {
+    font-size: 2.5em;
   }
 
-  .success {
-    background-color: $success;
+  .signup-landing-page {
+    height: 50px;
+    padding: 15px;
   }
-
-  .warning {
-    background-color: $warning;
-    height: 4px;
-  }
+}
