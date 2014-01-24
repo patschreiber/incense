@@ -1,4 +1,6 @@
 @import "fonts";
+@import "colors";
+@import "bootstrap-overrides";
 
 /*
 ##################################################################
@@ -15,3 +17,43 @@ body {
   font-size: 14px;
 }
 
+
+/* 
+  Buttons
+*/
+
+.btn-warning {
+  background-color: $warning;
+}
+
+.btn-warning:hover {
+  background-color: darken($warning, 5%);
+}
+
+.nav > li > a.btn-warning:hover {
+  background-color: darken($warning, 5%);
+}
+
+
+
+  /* Remove these test classes */
+  .black {
+    background-color: #000;
+  }
+
+  .call_to_action {
+    background-color: $call_to_action;
+  }
+
+  .accent_color {
+    background-color: $accent_color;
+  }
+
+  .success {
+    background-color: $success;
+  }
+
+  .warning {
+    background-color: $warning;
+    height: 4px;
+  }

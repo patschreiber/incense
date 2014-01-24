@@ -8,6 +8,11 @@ gem 'sqlite3'
 
 gem 'haml'
 
+# User accout manager
+gem 'devise'
+
+gem 'mysql2'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

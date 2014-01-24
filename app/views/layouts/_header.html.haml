@@ -1,0 +1,20 @@
+.row.accent_color
+  .container
+    .navbar{ "role" => "navigation"}
+      .navbar-header
+        %button{ :class => "navbar-toggle btn btn-warning", :data => { :toggle => 'collapse', :target => '#collapsed-header' } }
+          %span{ :class => 'ss-icon header-icons' }
+            &#x2026;
+        = link_to "Incense", "#", :class => "navbar-brand"
+
+      .collapse.navbar-collapse#collapsed-header
+        %ul{ :class => "nav navbar-nav" }
+          %li
+            = link_to "1", "#"
+          %li
+            = link_to "2", "#"
+        %ul{ :class => "nav navbar-nav navbar-right" }
+          %li
+            = link_to "Sign In", "#"
+          %li
+            = link_to "Sign Up", new_user_registration_path, :class => "btn btn-warning"
