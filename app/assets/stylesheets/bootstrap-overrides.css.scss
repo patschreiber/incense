@@ -11,6 +11,11 @@
   -webkit-box-shadow: 0 0 0;
 }
 
+.jumbotron {
+  border-radius: 0;
+  background-color: #FFF;
+}
+
 .navbar {
   background-image: none;
   border: 0;
@@ -40,9 +45,9 @@
 .navbar-collapse {
   border: 0;
   border-top: 0;
-  box-shadow: 0 0 0;
   padding-right: 0;
   padding-left: 0;
+  box-shadow: 0 0 0;
   -moz-box-shadow: 0 0 0;
   -o-box-shadow: 0 0 0;
   -webkit-box-shadow: 0 0 0;
@@ -52,8 +57,15 @@
   color: #FFF;
 }
 
-.jumbotron {
-  border-radius: 0;
-  background-color: #FFF;
+.row {
+  width: 100%;
 }
 
+.thumbnail {
+  border: 0;
+  border-radius: 0px;
+  box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  -o-box-shadow: 0 0 0;
+  -webkit-box-shadow: 0 0 0;
+}

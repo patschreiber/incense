@@ -50,6 +50,17 @@ body {
   width: 100%;
 }
 
+.high-margin-top {
+  margin: 30px 0 0 0;
+}
+
+.high-margin-bottom {
+  margin: 0 0 30px 0;
+}
+
+.vertical-center {
+  vertical-align: middle !important;
+}
 
 /*
 ##################################################################
@@ -78,6 +89,14 @@ body {
   background-color: $gray_lightest;
 }
 
+.white {
+  background-color: #FFF;
+}
+
+.color-success {
+  color: $success;
+}
+
 
 .navigation {
   .container {
@@ -102,5 +121,18 @@ body.landing_page {
   .signup-landing-page {
     height: 50px;
     padding: 15px;
+  }
+
+  .col-sm-1, .col-md-1, .col-lg-1 {
+    font-size: 30px;
+  }
+
+  .instructions {
+    .col-sm-1, .col-md-1, .col-lg-1, .col-sm-3, .col-md-3, .col-lg-3 {
+      float:none;
+      display:inline-block;
+      vertical-align:middle;
+      margin-right:-4px;
+    }
   }
 }
