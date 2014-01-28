@@ -1,7 +1,7 @@
 - provide :title, 'Home'
 - content_for :body_class, "landing_page"
 
-.row
+.width-100
   .container
     .jumbotron.text-center
       %h1.text-center
@@ -12,19 +12,32 @@
         %br
         Never waste money or food again. 
       = link_to "Sign up for free", signup_path, :class => "btn btn-warning signup-landing-page"
-.row.gray_lightest.instructions
+.width-100.gray_lightest.instructions
   .container.text-center
     .high-margin-top
-    .col-sm-3.col-md-3.col-lg-3
+    .hidden-xs
+      .col-sm-3.col-md-3.col-lg-3
+        %h4
+          Mark the date.
+      .col-sm-1.col-md-1.col-lg-1.flow-arrows.color-green-darker.ss-icon
+        &#x27A1;
+      .col-sm-3.col-md-3.col-lg-3
+        %h4
+          Set how you want to be notified.
+      .col-sm-1.col-md-1.col-lg-1.flow-arrows.color-green-darker.ss-icon
+        &#x27A1;
+      .col-sm-3.col-md-3.col-lg-3
+        %h4
+          Incense will notify you when the expiration date is near.
+    .visible-xs
       %h4
         Mark the date.
-    .col-sm-1.col-md-1.col-lg-1.color-success.ss-icon
-      &#x27A1;
-    .col-sm-3.col-md-3.col-lg-3
+      .flow-arrows.color-green-darker.ss-icon
+        &#x27A1;
       %h4
-        Set how you want to be notified/
-    .col-sm-1.col-md-1.col-lg-1.color-success.ss-icon
-      &#x27A1;
-    .col-sm-3.col-md-3.col-lg-3
+        Set how you want to be notified.
+      .flow-arrows.color-green-darker.ss-icon
+        &#x27A1;
       %h4
         Incense will notify you when the expiration date is near. 
+    .high-margin-top

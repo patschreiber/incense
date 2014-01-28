@@ -26,5 +26,8 @@ module Incense
     config.filter_parameters += [:password]
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+	
+    # Remove this on non-local development
+    config.secret_key_base = 'blipblapblup'
   end
 end

@@ -97,6 +97,10 @@ body {
   color: $success;
 }
 
+.color-green-darker {
+  color: $green_darker;
+}
+
 
 .navigation {
   .container {
@@ -123,8 +127,8 @@ body.landing_page {
     padding: 15px;
   }
 
-  .col-sm-1, .col-md-1, .col-lg-1 {
-    font-size: 30px;
+  .flow-arrows {
+    font-size: 22px;
   }
 
   .instructions {
