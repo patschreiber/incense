@@ -46,6 +46,10 @@ body {
 */
 
 
+.font-size-40 {
+  font-size: 40px;
+}
+
 .width-100 {
   width: 100%;
 }
@@ -61,6 +65,7 @@ body {
 .vertical-center {
   vertical-align: middle !important;
 }
+
 
 /*
 ##################################################################
@@ -137,6 +142,12 @@ body.landing_page {
       display:inline-block;
       vertical-align:middle;
       margin-right:-4px;
+    }
+
+    .feature-card {
+      min-height: 190px;
+      background-color: #FFF;
+      padding: 30px 0 30px 0;
     }
   }
 }
