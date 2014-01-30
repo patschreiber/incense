@@ -12,47 +12,16 @@
         %br
         Never waste money or food again. 
       = link_to "Sign up for free", signup_path, :class => "btn btn-warning signup-landing-page"
-.width-100.gray_lightest.instructions
+.width-100.instructions
   .container.text-center
-    .high-margin-top
-    .hidden-xs
-      .col-sm-3.col-md-3.col-lg-3.feature-card
-        .ss-icon.text-center.font-size-40
-          &#xF072;
-        %h4
-          Mark the date.
-      .col-sm-1.col-md-1.col-lg-1.flow-arrows.color-green-darker.ss-icon
-        &#x27A1;
-      .col-sm-3.col-md-3.col-lg-3.feature-card
-        .ss-icon.text-center.font-size-40
-          &#x1F514;
-        %h4
-          Set how you want to be notified.
-      .col-sm-1.col-md-1.col-lg-1.flow-arrows.color-green-darker.ss-icon
-        &#x27A1;
-      .col-sm-3.col-md-3.col-lg-3.feature-card
-        .ss-icon.text-center.font-size-40
-          &#x2139;
-        %h4
-          Incense will notify you when the expiration date is near.
-    .visible-xs
-      .feature-card
-        .ss-icon.text-center.font-size-40
-          &#xF072;
-        %h4
-          Mark the date.
-      .flow-arrows.color-green-darker.ss-icon
-        &#x2B07;
-      .feature-card
-        .ss-icon.text-center.font-size-40
-          &#x1F514;
-        %h4
-          Set how you want to be notified.
-      .flow-arrows.color-green-darker.ss-icon
-        &#x2B07;
-      .feature-card
-        .ss-icon.text-center.font-size-40
-          &#x2139;
-        %h4
-          Incense will notify you when the expiration date is near. 
-    .high-margin-top
+    = render :partial => "landing_page/section_feature_thumbnails"
+
+.width-100.gray_lightest
+  What
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
