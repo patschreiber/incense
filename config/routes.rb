@@ -1,5 +1,5 @@
 Incense::Application.routes.draw do
-  devise_for :users, :controllers => { :registrations => "registrations" }
+  devise_for :users, :controllers => { :registrations => "devise/registrations" }
 
   devise_scope :user do
     match '/signup' => 'devise/registrations#new', via: 'get', :as => :signup
