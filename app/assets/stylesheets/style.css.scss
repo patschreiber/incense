@@ -8,6 +8,8 @@
 ##################################################################
 */
 
+* {}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
 }
@@ -85,6 +87,39 @@ body {
 .c2a-large {
   height: 50px;
   padding: 15px;
+}
+
+
+/*
+##################################################################
+#                     Input Classes                              #
+##################################################################
+*/
+
+
+input[type=text], 
+input[type=email],
+input[type=password] {
+  border: none;
+  border-bottom: 1px solid $gray_light;
+  border-left: 1px solid $gray_light;
+  box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  -o-box-shadow: 0 0 0;
+  -webkit-box-shadow: 0 0 0;
+}
+
+input[type=text]:focus, 
+input[type=email]:focus,
+input[type=password]:focus {
+  border: none;
+  border-bottom: 1px solid $gray_dark;
+  border-left: 1px solid $gray_dark;
+  box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  -o-box-shadow: 0 0 0;
+  -webkit-box-shadow: 0 0 0;
+
 }
 
 
