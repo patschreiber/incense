@@ -11,14 +11,9 @@
           = link_to "Incense", root_path, :class => "navbar-brand"
         - if user_signed_in?
           .collapse.navbar-collapse#collapsed-header
-            %ul{ :class => "nav navbar-nav" }
+            %ul{ :class => "nav navbar-nav navbar-right" }
               %li
-                = link_to "1", "#"
-              %li
-                = link_to "2", "#"
-              %ul{ :class => "nav navbar-nav navbar-right" }
-                %li
-                  = link_to "Logout", logout_path, method: "delete", :class => "btn btn-warning"
+                = link_to "Logout", logout_path, method: "delete", :class => "btn btn-warning"
         - else
           .collapse.navbar-collapse#collapsed-header       
             %ul{ :class => "nav navbar-nav" }
