@@ -19,6 +19,11 @@ body {
   font-size: 14px;
 }
 
+hr {
+  border-top: $gray_light 1px solid;
+}
+
+
 
 /* 
   Buttons
@@ -39,6 +44,22 @@ body {
 .nav > li > a:hover {
   background-color: darken($accent_color, 5%)
 }
+
+
+
+/* 
+  Labels
+*/
+
+.label-warning {
+  background-color: $call_to_action;
+}
+
+.label-danger {
+  background-color: $danger;
+}
+
+
 
 
 /*
@@ -146,6 +167,10 @@ input[type=password]:focus {
   background-color: $warning;
 }
 
+.danger {
+  background-color: $danger;
+}
+
 .gray_lightest {
   background-color: $gray_lightest;
 }
@@ -212,5 +237,16 @@ body.landing_page {
         color: $gray_dark;
       }
     }
+  }
+}
+
+body.account_page {
+  .account-settings {
+    margin: 0 0 30px 0;
+  }
+
+  .danger-zone {
+    background-color: lighten($danger, 20%);
+    padding: 15px;
   }
 }

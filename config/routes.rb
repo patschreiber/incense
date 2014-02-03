@@ -5,6 +5,7 @@ Incense::Application.routes.draw do
     match '/signup' => 'devise/registrations#new', via: 'get', :as => :signup
     match '/signin' => 'devise/sessions#new', via: 'get'
     match '/logout' => 'devise/sessions#destroy', via: 'delete'
+    match '/account' => 'devise/registrations#edit', via: 'get'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -13,6 +13,11 @@
           .collapse.navbar-collapse#collapsed-header
             %ul{ :class => "nav navbar-nav navbar-right" }
               %li
+                = link_to account_path, method: "get" do
+                  %span{ :class => 'ss-icon header-icons' }
+                    &#x1F464;
+                  Account
+              %li
                 = link_to "Logout", logout_path, method: "delete", :class => "btn btn-warning"
         - else
           .collapse.navbar-collapse#collapsed-header       
@@ -23,6 +28,6 @@
                 = link_to "2", "#"     
             %ul{ :class => "nav navbar-nav navbar-right" }
               %li
-                = link_to "Sign In", "#"
+                = link_to "Sign In", new_user_session_path
               %li
                 = link_to "Sign Up", signup_path, :class => "btn btn-warning"
