@@ -13,6 +13,16 @@
           .collapse.navbar-collapse#collapsed-header
             %ul{ :class => "nav navbar-nav navbar-right" }
               %li
+                = link_to root_path, method: "get" do
+                  %span{ :class => 'ss-icon header-icons' }
+                    &#x2302;
+                  Dashboard
+              %li
+                = link_to "#", method: "get" do
+                  %span{ :class => 'ss-icon header-icons' }
+                    &#x1F4CA;
+                  Stats
+              %li
                 = link_to account_path, method: "get" do
                   %span{ :class => 'ss-icon header-icons' }
                     &#x1F464;

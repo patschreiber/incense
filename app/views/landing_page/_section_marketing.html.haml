@@ -1,0 +1,48 @@
+.width-100
+  .container
+    .jumbotron.text-center
+      %h1.text-center
+        What's in the fridge?
+      %h2
+        Incense keeps track of perishable foods in your fridge (or cabinet, or kitchen) and alerts you when something is about to spoil. 
+        %br
+        %br
+        Never waste food or money again. 
+      .btn.btn-warning.c2a-large#block-signup-button
+        Sign up for free
+      
+      .sign-up-form
+        = form_for(:user, :url => registration_path(:user), :html => { :class => "form-horizontal form", :role => "form", :style => "opacity:0;filter:alpha(opacity=0);" }) do |f|
+
+          .form-group
+            = f.label :email, :class => "control-label col-sm-3"
+            .col-sm-7
+              = f.email_field :email, :class => "form-control", :placeholder => "Email", :autofocus => true
+
+          .form-group
+            = f.label :password, :class => "control-label col-sm-3"
+            .col-sm-7
+              = f.password_field :password, :class => "form-control", :placeholder => "Password"
+
+          .form-group
+            = f.label :confirm_password, :class => "control-label col-sm-3"
+            .col-sm-7
+              = f.password_field :confirm_password, :class => "form-control", :placeholder => "Confirm Password"
+
+          .form-group
+            .col-sm-offset-3.col-sm-7
+              = f.submit "Sign up", :class => "btn btn-block btn-warning c2a-large"
+
+.width-100.instructions
+  .container.text-center
+    = render :partial => "landing_page/section_feature_thumbnails"
+
+.width-100.gray_lightest
+  What
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
