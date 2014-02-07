@@ -329,13 +329,20 @@ body.landing_page {
     padding: 10px;
     line-height: 40px;
     margin: 10px;
-
+    min-height: 100%;
     .date {
 
     }
 
-    .btn {
+    .btn-default, .btn-success {
+      margin-right: 10px;
+    }
+
+    .btn-warning, .btn-danger {
       margin-left: 10px;
+    }
+
+    .btn {
       position: relative;
       right: 0;
     }

@@ -13,24 +13,27 @@
         %h3
           Current Items
         .row.current-item
-          .col-sm-4.col-md-4.col-lg-4
-            Carrots
-          .col-sm-4.col-md-4.col-lg-4
-            %span{ :class => "date" }
-              Expiration Date: 12-20-2013
-          .col-sm-4.col-md-4.col-lg-4
-            %button.btn.btn-danger.delete.pull-right
-              %span{ :class => 'ss-icon header-icons' }
-                &#x2421;
-            %button.btn.btn-warning.accept.pull-right
-              %span{ :class => 'ss-icon header-icons' }
-                &#x2713;
-        .add-item
-          Eggs
+          %button.btn.btn-default.email-notification.pull-left
+            %span{ :class => 'ss-icon header-icons' }
+              E
+          %button.btn.btn-success.in-app-notification.pull-left
+            %span{ :class => 'ss-icon header-icons' }
+              M
+          .col-sm-6.col-md-6.col-lg-6
+            .col-sm-6.col-md-6.col-lg-6
+              .h3like
+                Carrots
+            .col-sm-6.col-md-6.col-lg-6
+              .date
+                %b
+                  12-20-2013
+        
+          %button.btn.btn-danger.delete.pull-right
+            %span{ :class => 'ss-icon header-icons' }
+              &#x2421;
           %button.btn.btn-warning.accept.pull-right
             %span{ :class => 'ss-icon header-icons' }
               &#x2713;
-
 
 
 
@@ -56,7 +59,7 @@
 
         %button.btn.btn-success.in-app-notification
           %span{ :class => 'ss-icon header-icons' }
-            IA
+            M
 
       .col-sm-4.col-md-4.col-lg-4
         %h3
