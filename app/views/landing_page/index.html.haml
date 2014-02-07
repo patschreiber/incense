@@ -11,12 +11,36 @@
     .row
       .col-sm-8.col-md-8.col-lg-8
         %h3
-          Add Items
-        %ul
-          %li
-            This is where the item additions are going to go
-          %li
-            Did you want to add a classification?
+          Current Items
+        .row.current-item
+          .col-sm-4.col-md-4.col-lg-4
+            Carrots
+          .col-sm-4.col-md-4.col-lg-4
+            %span{ :class => "date" }
+              Expiration Date: 12-20-2013
+          .col-sm-4.col-md-4.col-lg-4
+            %button.btn.btn-danger.delete.pull-right
+              %span{ :class => 'ss-icon header-icons' }
+                &#x2421;
+            %button.btn.btn-warning.accept.pull-right
+              %span{ :class => 'ss-icon header-icons' }
+                &#x2713;
+        .add-item
+          Eggs
+          %button.btn.btn-warning.accept.pull-right
+            %span{ :class => 'ss-icon header-icons' }
+              &#x2713;
+
+
+
+
+
+
+
+
+
+
+
 
         %button.btn.btn-warning.accept
           %span{ :class => 'ss-icon header-icons' }
@@ -35,6 +59,8 @@
             IA
 
       .col-sm-4.col-md-4.col-lg-4
+        %h3
+          Currently in the fridge...
         %p.gray_lightest
           This is where the currently applied items are going to go
 
