@@ -14,6 +14,34 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
 }
 
+.h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
+}
+
+.h1like {
+  font-size: 36px;
+}
+
+.h2like {
+  font-size: 30px;
+}
+
+.h3like {
+  font-size: 24px;
+}
+
+.h4like {
+  font-size: 18px;
+}
+
+.h5like {
+  font-size: 14px;
+}
+
+.h6like {
+  font-size: 12px;
+}
+
 body {
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: 14px;
@@ -22,29 +50,6 @@ body {
 hr {
   border-top: $gray_light 1px solid;
 }
-
-
-
-/* 
-  Buttons
-*/
-
-.btn-warning {
-  background-color: $warning;
-}
-
-.btn-warning:hover {
-  background-color: darken($warning, 5%);
-}
-
-.nav > li > a.btn-warning:hover {
-  background-color: darken($warning, 5%);
-}
-
-.nav > li > a:hover {
-  background-color: darken($accent_color, 5%)
-}
-
 
 
 /* 
@@ -140,7 +145,73 @@ input[type=password]:focus {
   -moz-box-shadow: 0 0 0;
   -o-box-shadow: 0 0 0;
   -webkit-box-shadow: 0 0 0;
+}
 
+
+/*
+##################################################################
+#                     Button Classes                             #
+##################################################################
+*/
+
+.btn-warning {
+  color: #FFFFFF;
+  background-color: $warning;
+}
+
+.btn-warning:hover {
+  color: #FFFFFF;
+  background-color: darken($warning, 5%);
+}
+
+.nav > li > a.btn-warning:hover {
+  background-color: darken($warning, 5%);
+}
+
+.nav > li > a:hover {
+  background-color: darken($accent_color, 5%)
+}
+
+.btn-danger {
+  color: #FFFFFF;
+  background-color: $danger;
+}
+
+.btn-danger:hover {
+  color: #FFFFFF;
+  background-color: darken($danger, 5%);
+}
+
+.btn-success {
+  color: #FFFFFF;
+  background-color: $success;
+}
+
+.btn-success:hover {
+  color: #FFFFFF;
+  background-color: darken($success, 5%);
+}
+
+.btn-default {
+  color: #FFFFFF;
+  background-color: $accent_color;
+}
+
+.btn-default:hover {
+  color: #FFFFFF;
+  background-color: darken($accent_color, 5%);
+}
+
+.accept, .delete, {
+  height: 40px;
+  width: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.email-notification, .in-app-notification {
+  height: 40px;
+  width: 40px;
 }
 
 
@@ -201,6 +272,13 @@ input[type=password]:focus {
     font-size: 2.5em;
   }
 }
+
+
+/*
+##################################################################
+#                     Body Classes                               #
+##################################################################
+*/
 
 
 body.landing_page {

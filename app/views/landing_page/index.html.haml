@@ -3,8 +3,42 @@
 
 - if user_signed_in?
   .container
-    %h1
-      Dashboard
+    .row
+      .col-sm-12.col-md-12.col-lg-12
+        %h1
+          Dashboard
+    %hr
+    .row
+      .col-sm-8.col-md-8.col-lg-8
+        %h3
+          Add Items
+        %ul
+          %li
+            This is where the item additions are going to go
+          %li
+            Did you want to add a classification?
+
+        %button.btn.btn-warning.accept
+          %span{ :class => 'ss-icon header-icons' }
+            &#x2713;
+
+        %button.btn.btn-danger.delete
+          %span{ :class => 'ss-icon header-icons' }
+            &#x2421;
+
+        %button.btn.btn-default.email-notification
+          %span{ :class => 'ss-icon header-icons' }
+            E
+
+        %button.btn.btn-success.in-app-notification
+          %span{ :class => 'ss-icon header-icons' }
+            IA
+
+      .col-sm-4.col-md-4.col-lg-4
+        %p.gray_lightest
+          This is where the currently applied items are going to go
+
+
   
 
 - else
