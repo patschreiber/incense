@@ -16,6 +16,7 @@
           - if @inventory_items.present?
             - @inventory_items.each do |i|
               - @name =  i.name
+              - @expiration = i.expiration.strftime( "%-m/%-d/%Y" )
               = render "inventory/inventory_item", :locals => { @name => @name, @expiration => @expiration, @classification => @classification_id }
           - else
             %p.gray_light

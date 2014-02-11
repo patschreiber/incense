@@ -6,11 +6,12 @@
     %span{ :class => 'ss-icon header-icons' }
       M
   .col-sm-6.col-md-6.col-lg-6
-    .h3like.text-center
+    .h4like.text-center
       #{@name}
-    .date
-      %b
-        #{@expiration}
+    %span
+      .date
+        %b
+          #{@expiration}
 
   %button.btn.btn-danger.delete.pull-right
     %span{ :class => 'ss-icon header-icons' }
