@@ -12,36 +12,27 @@
       .col-sm-7.col-md-7.col-lg-7
         %h3
           Current Items
-        .row.current-item
-          %button.btn.btn-default.email-notification.pull-left
-            %span{ :class => 'ss-icon header-icons' }
-              E
-          %button.btn.btn-success.in-app-notification.pull-left
-            %span{ :class => 'ss-icon header-icons' }
-              M
-          .col-sm-6.col-md-6.col-lg-6
-            .col-sm-6.col-md-6.col-lg-6
-              .h3like.text-center
-                Carrots
-            .col-sm-6.col-md-6.col-lg-6
-              .date
-                %b
-                  12-20-2013
-        
-          %button.btn.btn-danger.delete.pull-right
-            %span{ :class => 'ss-icon header-icons' }
-              &#x2421;
-          %button.btn.btn-warning.accept.pull-right
-            %span{ :class => 'ss-icon header-icons' }
-              &#x2713;
+        #current-inventory
+          - if @inventory_items.present?
+            - @inventory_items.each do |i|
+              - @name =  i.name
+              = render "inventory/inventory_item", :locals => { @name => @name, @expiration => @expiration, @classification => @classification_id }
+          - else
+            %p.gray_light
+              <i>Add an item to the right to get tracking</i>
 
 
 
       .col-sm-5.col-md-5.col-lg-5
+        - if flash[:notice]
+          .alert.alert-warning.text-center.alert-dismissable
+            %button{ :class => "close", :data => { :dismiss => "alert" } } 
+              x
+            = flash[:notice]
         %h3
           Add an item to track
         .col-sm-12.col-md-12.col-lg-12.add-item
-          = form_for(@item, :url => add_item_path, :html => { :class => "form-horizontal", :role => "form" } ) do |f|
+          = form_for(@item, :url => add_item_path, :html => { :class => "form-horizontal add-item-form", :role => "form" } ) do |f|
             .form-group
               = f.label :name, :class => "control-label sr-only"
               = f.text_field :name, :class => "form-control", :placeholder => "Item Name", :autofocus => true
@@ -54,12 +45,11 @@
               = f.date_select :expiration, :order => [:month, :day, :year], :include_blank => true, :use_short_month => true, :start_year => Time.now.year, :end_year => Time.now.year + 9, :html => { :class => "form-control" }
             .form-group
               .h4like 
-                Classification
+                Classification (Optional)
               = f.label :classification_id, :class => "control-label sr-only"
               = f.select :classification_id, options_for_select(@classifications.name), :include_blank => true, :html => { :class => "form-control" }
             .form-group
-              .btn.btn-block.btn-warning.c2a-large
-                Add Item
+              = f.submit "Add Item", :class => "btn btn-block btn-warning c2a-large add-item-button"
 
   
 

@@ -1,3 +1,6 @@
 class Item < ActiveRecord::Base
-  belongs_to :users
+  validates :name, presence: true
+  validates :expiration, presence: true
+
+  belongs_to :user
 end

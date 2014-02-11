@@ -1,0 +1,20 @@
+.row.current-item
+  %button.btn.btn-default.email-notification.pull-left
+    %span{ :class => 'ss-icon header-icons' }
+      E
+  %button.btn.btn-success.in-app-notification.pull-left
+    %span{ :class => 'ss-icon header-icons' }
+      M
+  .col-sm-6.col-md-6.col-lg-6
+    .h3like.text-center
+      #{@name}
+    .date
+      %b
+        #{@expiration}
+
+  %button.btn.btn-danger.delete.pull-right
+    %span{ :class => 'ss-icon header-icons' }
+      &#x2421;
+  %button.btn.btn-warning.accept.pull-right
+    %span{ :class => 'ss-icon header-icons' }
+      &#x2713;
