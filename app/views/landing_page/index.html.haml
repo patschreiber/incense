@@ -9,7 +9,7 @@
           Dashboard
     %hr
     .row
-      .col-sm-8.col-md-8.col-lg-8
+      .col-sm-7.col-md-7.col-lg-7
         %h3
           Current Items
         .row.current-item
@@ -37,36 +37,29 @@
 
 
 
-
-
-
-
-
-
-
-
-        %button.btn.btn-warning.accept
-          %span{ :class => 'ss-icon header-icons' }
-            &#x2713;
-
-        %button.btn.btn-danger.delete
-          %span{ :class => 'ss-icon header-icons' }
-            &#x2421;
-
-        %button.btn.btn-default.email-notification
-          %span{ :class => 'ss-icon header-icons' }
-            E
-
-        %button.btn.btn-success.in-app-notification
-          %span{ :class => 'ss-icon header-icons' }
-            M
-
-      .col-sm-4.col-md-4.col-lg-4
+      .col-sm-5.col-md-5.col-lg-5
         %h3
-          Currently in the fridge...
-        %p.gray_lightest
-          This is where the currently applied items are going to go
-
+          Add an item to track
+        .col-sm-12.col-md-12.col-lg-12.add-item
+          = form_for(@item, :url => add_item_path, :html => { :class => "form-horizontal", :role => "form" } ) do |f|
+            .form-group
+              = f.label :name, :class => "control-label sr-only"
+              = f.text_field :name, :class => "form-control", :placeholder => "Item Name", :autofocus => true
+            .form-group
+              = f.label :expiration, :class => "control-label sr-only"
+              .h4like 
+                Expiration Date
+              %p.help-block
+                <i>MM/DD/YYYY</i>
+              = f.date_select :expiration, :order => [:month, :day, :year], :include_blank => true, :use_short_month => true, :start_year => Time.now.year, :end_year => Time.now.year + 9, :html => { :class => "form-control" }
+            .form-group
+              .h4like 
+                Classification
+              = f.label :classification_id, :class => "control-label sr-only"
+              = f.select :classification_id, options_for_select(@classifications.name), :include_blank => true, :html => { :class => "form-control" }
+            .form-group
+              .btn.btn-block.btn-warning.c2a-large
+                Add Item
 
   
 
