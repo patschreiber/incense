@@ -7,7 +7,8 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 
 gem 'haml'
-gem 'thin'
+gem 'rspec'
+gem 'rspec-rails'
 
 # User accout manager
 gem 'devise'

@@ -4,7 +4,9 @@ class LandingPageController < ApplicationController
     @date = Date.today.in_time_zone
     @item = Item.new
     @classifications = Classification.all
-    @inventory_items = User.find(current_user).items
+    if user_signed_in?
+      @inventory_items = User.find(current_user).items
+    end
   end
 
 
