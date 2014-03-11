@@ -10,6 +10,10 @@
 
 * {}
 
+html, body {
+  height: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
 }
@@ -114,7 +118,6 @@ hr {
   height: 50px;
   padding: 15px;
 }
-
 
 /*
 ##################################################################
@@ -300,8 +303,10 @@ body.landing_page {
     font-size: 2.5em;
   }
 
-  select {
-
+  #current-inventory {
+    height: 600px;
+    padding: 0 25px 0 0;
+    overflow-y: scroll;
   }
 
   .flow-arrows {
@@ -356,11 +361,7 @@ body.landing_page {
     border: 1px solid $gray_light;
     padding: 10px;
     line-height: 40px;
-    margin: 10px;
-    min-height: 100%;
-    .date {
-
-    }
+    margin: 0 10px 20px 10px;
 
     .btn-default, .btn-success {
       margin-right: 10px;
