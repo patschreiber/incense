@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'haml'
 gem 'rspec'
 gem 'rspec-rails'
+gem 'figaro'
 
 # User accout manager
 gem 'devise'
