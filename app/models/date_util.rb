@@ -12,7 +12,7 @@ class DateUtil
     if month == "" && day == "" && year == ""
       date = nil
     else
-      date  = "#{month}-#{day}-#{year}"
+      date  = "#{month}-#{day}-#{year}".to_date
     end
 
     return date
