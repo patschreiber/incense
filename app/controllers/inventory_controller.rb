@@ -10,7 +10,7 @@ class InventoryController < ApplicationController
     @formatted_expiration = DateUtil.humanize_date( @expiration_month, @expiration_day, @expiration_year )
     @item_status = 1
 
-    if @name.nil? || @expiration_month.nil? || @expiration_day.nil? || @expiration_year.nil? || @formatted_expiration < DateTime.now.to_date
+    if @name.nil? || (@formatted_expiration < DateTime.now.to_date)
       # TODO Add Error Here
     else
       @item = Item.new
