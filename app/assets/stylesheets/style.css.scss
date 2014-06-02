@@ -1,6 +1,7 @@
 @import "fonts";
 @import "colors";
 @import "bootstrap-overrides";
+@import "variables";
 
 /*
 ##################################################################
@@ -97,18 +98,6 @@ hr {
 
 .font-size-40 {
   font-size: 40px;
-}
-
-.width-100 {
-  width: 100%;
-}
-
-.high-margin-top {
-  margin: 30px 0 0 0;
-}
-
-.high-margin-bottom {
-  margin: 0 0 30px 0;
 }
 
 .vertical-center {
@@ -327,6 +316,11 @@ body.landing_page {
     font-size: 2.5em;
   }
 
+  section {
+    border-top: 1px solid $gray_light;
+    margin: $section_margin;
+  }
+
   #current-inventory {
     height: 600px;
     padding: 0 25px 0 0;
@@ -338,6 +332,7 @@ body.landing_page {
   }
 
   .sign-up-form {
+    margin: 50px 0 0 0;
     display: none;
   }
 
@@ -418,5 +413,24 @@ body.account_page {
   .danger-zone {
     background-color: lighten($danger, 20%);
     padding: 15px;
+  }
+}
+
+
+footer {
+  color: #FFF;
+  margin: $footer_margin;
+  background-color: $accent_color;
+
+  a {
+    color: $call_to_action;
+
+    &:hover {
+      color: darken($call_to_action, 15%);
+    }
+  }
+
+  .breadcrumb {
+    margin: 0;
   }
 }

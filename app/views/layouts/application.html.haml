@@ -12,8 +12,8 @@
     - if content_for?(:meta_description)
       %meta{:content => yield(:meta_description), :name => "description" }
 
-
-  %body{ :class => "#{yield :body_class}" }
     = render 'layouts/header'
+  %body{ :class => "#{yield :body_class}" }
     = yield 
+    = render 'layouts/footer'
 
