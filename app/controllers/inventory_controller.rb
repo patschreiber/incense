@@ -1,23 +1,22 @@
 class InventoryController < ApplicationController
 
   def add
-    @user = User.find(current_user)
+    @user = User.find(current_user) 
     @name = params[:item][:name]
-    @expiration_month = params[:item]["expiration(2i)"]
-    @expiration_day = params[:item]["expiration(3i)"]
-    @expiration_year = params[:item]["expiration(1i)"]
     @classification = params[:item][:classification]
-    @formatted_expiration = DateUtil.humanize_date( @expiration_month, @expiration_day, @expiration_year )
+    @formatted_expiration = Date.parse(params[:item]["expiration(3i)"] + '-'  + params[:item]["expiration(2i)"] + '-'  + params[:item]["expiration(1i)"] )
+    Rails.logger.debug @formatted_expiration.month
+    Rails.logger.debug @formatted_expiration
     @item_status = 1
 
-    if @name.nil? || (@formatted_expiration < DateTime.now.to_date)
+    if @name.nil?
       # TODO Add Error Here
     else
       @item = Item.new
       @item.user_id = @user.id
       @item.name = @name
       @item.item_status_id = @item_status
-      @item.expiration = DateUtil.format_for_database( @expiration_month, @expiration_day, @expiration_year )
+      @item.expiration = @formatted_expiration
       @item.save!
 
       respond_to do |format|

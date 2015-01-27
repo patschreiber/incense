@@ -23,9 +23,9 @@ Incense::Application.routes.draw do
 
   root 'landing_page#index'
 
-  match '/add-item' => 'inventory#add', via: 'put', :as => :add_item
-  match '/delete-item' => 'inventory#delete', via: 'put', :as => :delete_item
-  match '/update-item' => 'inventory#update', via: 'put', :as => :update_item
+  match '/add-item' => 'inventory#add', via: 'post', :as => :add_item
+  match '/delete-item' => 'inventory#delete', via: 'post', :as => :delete_item
+  match '/update-item' => 'inventory#update', via: 'post', :as => :update_item
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

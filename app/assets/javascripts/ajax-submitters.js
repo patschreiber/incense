@@ -5,7 +5,7 @@ $(document).ready(function() {
     var valuesToSubmit = $(this).serialize();
 
     $.ajax({
-      type: 'PUT',
+      type: 'POST',
       url: '/add-item',
       data: valuesToSubmit,
       beforeSend: function() {
