@@ -64,11 +64,6 @@
                 <i>MM/DD/YYYY</i>
               = f.date_select :expiration, :order => [:month, :day, :year], :include_blank => true, :use_short_month => true, :start_year => Time.now.year, :end_year => Time.now.year + 9, :html => { :class => "form-control" }
             .form-group
-              .h4like 
-                Classification (Optional)
-              = f.label :classification_id, :class => "control-label sr-only"
-              = f.select :classification_id, options_for_select(@classifications.name), :include_blank => true, :html => { :class => "form-control" }
-            .form-group
               = f.submit "Add Item", :class => "btn btn-block btn-warning c2a-large add-item-button"
 
   
