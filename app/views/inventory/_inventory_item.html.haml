@@ -1,4 +1,4 @@
-.row.current-item
+.row.current-item{ :id => "item-" + unique_id}
   %button.btn.btn-default.email-notification.pull-left
     %span{ :class => 'ss-icon header-icons' }
       E
@@ -7,11 +7,11 @@
       M
   .col-sm-6.col-md-6.col-lg-6
     .h4like.text-center
-      #{@name}
+      #{name}
     %span
       .date
         %b
-          #{@expiration}
+          #{expiration}
 
   %button.btn.btn-danger.delete.pull-right
     %span{ :class => 'ss-icon header-icons' }

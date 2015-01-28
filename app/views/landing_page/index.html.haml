@@ -15,9 +15,28 @@
         #current-inventory
           - if @inventory_items.present?
             - @inventory_items.each do |i|
-              - @name =  i.name
-              - @expiration = i.expiration.strftime( "%-m/%-d/%Y" )
-              = render "inventory/inventory_item", :locals => { @name => @name, @expiration => @expiration, @classification => @classification_id }
+              .row.current-item
+                %button.btn.btn-default.email-notification.pull-left
+                  %span{ :class => 'ss-icon header-icons' }
+                    E
+                %button.btn.btn-success.in-app-notification.pull-left
+                  %span{ :class => 'ss-icon header-icons' }
+                    M
+                .col-sm-6.col-md-6.col-lg-6
+                  .h4like.text-center
+                    = i.name
+                  %span
+                    .date
+                      Expiration: 
+                      %strong
+                        = i.expiration.strftime( "%-m/%-d/%Y" )
+
+                %button.btn.btn-danger.delete.pull-right
+                  %span{ :class => 'ss-icon header-icons' }
+                    &#x2421;
+                %button.btn.btn-warning.accept.pull-right
+                  %span{ :class => 'ss-icon header-icons' }
+                    &#x2713;
           - else
             %p.gray_light
               <i>Add an item to the right to get tracking</i>
