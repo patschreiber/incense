@@ -1,3 +1,6 @@
+#http://railscasts.com/episodes/164-cron-in-ruby?view=asciicast
+
+
 # Use this file to easily define all of your cron jobs.
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.
@@ -19,10 +22,18 @@
 
 # Learn more: http://github.com/javan/whenever
 
-
-set :output ENV["CRON_PATH"]
-
-every :hour do
+every 5.minutes do
   # http://stackoverflow.com/questions/14278830/rails-cron-not-sending-emails
-  Rails.logger.debug "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+  command "echo '++++++++++++++++++++++++++++'"
+  runner "Test.print_incense_log"
 end
+
+
+
+#set :output ENV["CRON_PATH"]
+
+#every :hour do
+#  # http://stackoverflow.com/questions/14278830/rails-cron-not-sending-emails
+#  user = User.find_by_email('patrick.schreiber+87387847837872@themisbar.com')
+#  runner UserMailer.welcome_email(user)
+#end
