@@ -27,7 +27,7 @@
                     = i.name
                   %span
                     .date
-                      Expiration: 
+                      Expiration:
                       %strong
                         = i.expiration.strftime( "%-m/%-d/%Y" )
 
@@ -44,11 +44,6 @@
 
 
       .col-sm-5.col-md-5.col-lg-5
-        - if flash[:notice]
-          .alert.alert-warning.text-center.alert-dismissable
-            %button{ :class => "close", :data => { :dismiss => "alert" } } 
-              x
-            = flash[:notice]
         %h3
           Add an item to track
         .col-sm-12.col-md-12.col-lg-12.add-item
@@ -58,7 +53,7 @@
               = f.text_field :name, :class => "form-control", :placeholder => "Item Name", :autofocus => true
             .form-group
               = f.label :expiration, :class => "control-label sr-only"
-              .h4like 
+              .h4like
                 Expiration Date
               %p.help-block
                 <i>MM/DD/YYYY</i>
@@ -66,7 +61,8 @@
             .form-group
               = f.submit "Add Item", :class => "btn btn-block btn-warning c2a-large add-item-button"
 
-  
+
 
 - else
-  = render :partial => 'landing_page/section_marketing'
+  .container
+    = render :partial => 'landing_page/section_marketing'

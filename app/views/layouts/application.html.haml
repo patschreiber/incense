@@ -2,18 +2,32 @@
 %html
   %head
     %title
-      = (yield :title).present? ? "#{yield :title} | Incense" : "Incense" 
+      = (yield :title).present? ? "#{yield :title} | Incense" : "Incense"
     = favicon_link_tag "favicon.ico"
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
-    = csrf_meta_tags 
+    = csrf_meta_tags
     %meta{'http-equiv' => 'Content-Language', :content => 'en'}
     %meta{:content => "width=device-width", :name => "viewport", "initial-scale" => 1.0, "maximum-scale" => 1.0, "user-scalable" => "no"}
     - if content_for?(:meta_description)
       %meta{:content => yield(:meta_description), :name => "description" }
 
-    = render 'layouts/header'
   %body{ :class => "#{yield :body_class}" }
-    = yield 
+
+    = render 'layouts/header'
+
+    .col-sm-4.col-sm-offset-4
+      - if flash[:notice]
+        .alert.alert-warning.text-center.alert-dismissable
+          %button{ :class => "close", :data => { :dismiss => "alert" } }
+            x
+          = flash[:notice]
+
+      - if flash[:error]
+        .alert.alert-danger.text-center.alert-dismissable
+          %button{ :class => "close", :data => { :dismiss => "alert" } }
+            x
+          = flash[:error]
+    = yield
     = render 'layouts/footer'
 

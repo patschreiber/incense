@@ -1,17 +1,18 @@
 .jumbotron.text-center
   .container
-    %h1.text-center
-      Wasting food sucks. Wasting money sucks more.
-    %br
-    .col-sm-6.col-sm-offset-3
-      %h3
-        Incense keeps track of perishable foods in your fridge (or cabinet, or kitchen) and alerts you when something is about to spoil. 
-      %h3
-        Never waste food or money again. 
+    .col-sm-12
+      %h1.text-center
+        Wasting food sucks. Wasting money sucks more.
+      %br
+      .col-sm-6.col-sm-offset-3
+        %h3
+          Incense keeps track of perishable foods in your fridge (or cabinet, or kitchen) and alerts you when something is about to spoil.
+        %h3
+          Never waste food or money again.
     .clearfix
     .btn.btn-warning.c2a-large#block-signup-button
       Sign up for free
-    
+
     .sign-up-form
       = form_for(:user, :url => registration_path(:user), :html => { :class => "form-horizontal form", :role => "form", :style => "opacity:0;filter:alpha(opacity=0);" }) do |f|
 
