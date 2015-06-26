@@ -28,6 +28,12 @@
           %button{ :class => "close", :data => { :dismiss => "alert" } }
             x
           = flash[:error]
+
+      - if flash[:alert]
+        .alert.alert-danger.text-center.alert-dismissable
+          %button{ :class => "close", :data => { :dismiss => "alert" } }
+            x
+          = flash[:alert]
     = yield
     = render 'layouts/footer'
 

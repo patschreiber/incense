@@ -1,6 +1,7 @@
 .container
-  %h2
-    Sign In
+  .col-sm-12
+    %h2
+      Sign In
 
   = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "form-horizontal", :role => "form" }) do |f|
     .form-group

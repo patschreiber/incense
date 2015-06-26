@@ -12,7 +12,10 @@
 * {}
 
 html, body {
-  height: 100%;
+  min-height: 100%;
+}
+body {
+  margin: 0 0 $footer_margin 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,7 +60,7 @@ hr {
 }
 
 
-/* 
+/*
   Labels
 */
 
@@ -142,7 +145,7 @@ textarea {
   border: none;
 }
 
-input[type=text], 
+input[type=text],
 input[type=email],
 input[type=password] {
   border: none;
@@ -154,7 +157,7 @@ input[type=password] {
   -webkit-box-shadow: 0 0 0;
 }
 
-input[type=text]:focus, 
+input[type=text]:focus,
 input[type=textarea]:focus,
 input[type=email]:focus,
 input[type=password]:focus {
@@ -418,8 +421,12 @@ body.account_page {
 
 
 footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   color: #FFF;
   margin: $footer_margin;
+  width: 100%;
   background-color: $accent_color;
 
   a {

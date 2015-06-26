@@ -22,6 +22,7 @@ Incense::Application.routes.draw do
   # root 'welcome#index'
 
   root 'landing_page#index'
+  match '/about' => 'pages#about', via: 'get', :as => :about
 
   match '/add-item' => 'inventory#add', via: 'post', :as => :add_item
   match '/delete-item' => 'inventory#delete', via: 'post', :as => :delete_item
@@ -61,7 +62,7 @@ Incense::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
